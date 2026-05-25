@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vegetable Shop</title>
+
+<style>
+body{
+    margin: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Image section */
+.ma{
+    height: 45vh;
+    background: url('mzz.jpg') center/cover no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading */
+.ma p{
+    margin: 0;
+    font-size: 6vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Transparent text effect */
+.ma p span{
+    background: url('mzz.jpg') center/cover no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+/* Search box under heading */
+.search-box{
+    margin-top: 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Transparent input */
+.search-box input{
+    width: 100%;
+    padding: 14px;
+
+    border: 2px solid white;
+    border-radius: 10px;
+
+    background: transparent;
+    color: white;
+
+    font-size: 16px;
+    outline: none;
+
+    backdrop-filter: blur(5px);
+}
+
+/* Placeholder */
+.search-box input::placeholder{
+    color: #ddd;
+}
+
+/* Mobile */
+@media (max-width: 600px){
+
+    .ma{
+        height: 40vh;
+    }
+
+    .ma p{
+        font-size: 8vw;
+    }
+
+    .search-box input{
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <!-- Image + heading -->
+    <div class="ma">
+
+        <p><span>Shop Your Vegetable</span></p>
+
+        <!-- Transparent input under heading -->
+        <div class="search-box">
+            <input type="text" placeholder="Search vegetables...">
+        </div>
+
+    </div>
+
+</body>
+</html>
